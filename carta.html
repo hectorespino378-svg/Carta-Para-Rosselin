@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Rosselin 🖤</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #29202c, #090909 65%);
+    color: white;
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.portada {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 18px;
+    position: relative;
+}
+
+.etiqueta {
+    color: #f5a9c9;
+    letter-spacing: 4px;
+    font: 11px Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(38px, 10vw, 58px);
+    margin: 5px 0;
+    color: #fff;
+    text-shadow: 0 0 18px #e99aba;
+}
+
+.subtitulo {
+    color: #d6c5d0;
+    font-size: 16px;
+    margin: 12px 0 22px;
+}
+
+.snoopy {
+    width: min(75vw, 290px);
+    max-height: 290px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 22px #f3a6c9);
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.decoracion {
+    color: #f5a9c9;
+    font-size: 20px;
+    letter-spacing: 12px;
+    margin: 12px 0;
+}
+
+button {
+    background: linear-gradient(135deg, #f3b2ce, #d77ca5);
+    color: #170d13;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 25px #e58eb8;
+    margin-top: 15px;
+    transition: transform .3s;
+}
+
+button:active {
+    transform: scale(.94);
+}
+
+.nota {
+    font: 11px Arial, sans-serif;
+    color: #a99ba5;
+    margin-top: 22px;
+}
+
+.carta {
+    display: none;
+    max-width: 520px;
+    width: 90%;
+    margin: 25px auto 55px;
+    padding: 30px 23px;
+    background: linear-gradient(145deg, #211a20, #100e11);
+    border: 1px solid #d88bad;
+    border-radius: 20px;
+    box-shadow: 0 0 35px #bd7297;
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(35px) scale(.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.carta h2 {
+    color: #f4a9c9;
+    font-size: 29px;
+}
+
+.carta p {
+    color: #eee1e9;
+    line-height: 1.9;
+    font-size: 16px;
+    text-align: left;
+}
+
+.frase {
+    color: #f5a9c9 !important;
+    text-align: center !important;
+    font-style: italic;
+    font-size: 19px !important;
+    margin: 25px 0;
+}
+
+.firma {
+    text-align: right !important;
+    color: #f5a9c9 !important;
+}
+
+.corazon {
+    position: fixed;
+    bottom: -30px;
+    color: #f5a9c9;
+    animation: subir 7s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes subir {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.oculto {
+    display: none;
+}
+
+footer {
+    color: #8d7b87;
+    font: 11px Arial, sans-serif;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="portada" id="portada">
+
+    <div class="etiqueta">UNA PEQUEÑA SORPRESA PARA TI</div>
+
+    <h1>Rosselin 🖤</h1>
+
+    <div class="subtitulo">
+        Hay personas que hacen especiales los días normales...
+    </div>
+
+   <img class="snoopy"
+     src="snoopy.png"
+     alt="Snoopy">
+
+    <div class="decoracion">♡ ✦ ♡ ✦ ♡</div>
+
+    <p style="color:#e8dce4; font-size:15px;">
+        Tengo algo que quiero decirte...
+    </p>
+
+    <button onclick="abrirCarta()">
+        Abrir mi carta ♡
+    </button>
+
+    <div class="nota">
+        Hecha especialmente para Rosselin · Viernes 13
+    </div>
+
+</section>
+
+<section class="carta" id="carta">
+
+    <div style="font-size:30px;">♡ 🖤 ♡</div>
+
+    <h2>Para Rosselin</h2>
+
+    <p>
+        No quería dejar pasar este día sin hacer algo especial
+        para ti. Tal vez no sea el regalo más grande del mundo,
+        pero está hecho con mucho cariño.
+    </p>
+
+    <p>
+        Quiero que sepas que tienes una forma muy bonita de
+        hacer que un momento sencillo se convierta en algo
+        especial. A veces las palabras no me alcanzan para expresar
+        lo que siento, pero aun así quería intentarlo, también quiero 
+        que sepas que pase lo que pase en el futuro, puedes contar conmigo 
+        sin importar lo dificil que sea, te quiero mucho y muchas gracias por
+        existir ya que haces feliz, no solo a una, sino a muchisimas personas, nunca
+        dejes de ser tú porque eres una de las maravillas que tiene este mundo,
+        te quiero mucho y agradezco a Dios por ser tú quien me acompañe en este viernes 13 TQMBB <3
+    </p>
+
+    <p class="frase">
+        «Dicen que el viernes 13 trae mala suerte,
+        pero conocerte a tí, fué mi mayor suerte». ♡
+    </p>
+
+    <p>
+        Espero que esta pequeña sorpresa te saque una sonrisa
+        y te recuerde lo especial que eres para mí.
+    </p>
+
+    <p class="firma">
+        CON MUCHO CARIÑO,<br>
+        PARA LA MUJER MAS BELLA. 🖤
+    </p>
+
+    <div style="font-size:30px; margin-top:20px;">
+        ♡ Te Amo ♡
+    </div>
+
+    <button onclick="cerrarCarta()">Volver a la portada</button>
+
+</section>
+
+<footer>
+    Un detalle pequeño, pero hecho con mucho cariño.
+</footer>
+
+<script>
+function abrirCarta() {
+    document.getElementById("portada").style.display = "none";
+    document.getElementById("carta").style.display = "block";
+    window.scrollTo(0, 0);
+}
+
+function cerrarCarta() {
+    document.getElementById("carta").style.display = "none";
+    document.getElementById("portada").style.display = "flex";
+    window.scrollTo(0, 0);
+}
+
+function crearCorazon() {
+    const corazon = document.createElement("div");
+    corazon.className = "corazon";
+    corazon.textContent = Math.random() > 0.5 ? "♡" : "♥";
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.fontSize = (15 + Math.random() * 20) + "px";
+    corazon.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(() => corazon.remove(), 10000);
+}
+
+setInterval(crearCorazon, 700);
+</script>
+
+</body>
+</html>
